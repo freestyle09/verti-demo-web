@@ -1,0 +1,60 @@
+@import '../modules/_variables.scss';
+@import '../modules/_mixins.scss';
+
+main {
+  margin-top: 40px;
+  .container {
+
+    @include desktop() {
+      display: flex;
+      justify-content: space-between;
+    }
+    .image {
+      margin-top: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 3px 0 $color-bg;
+      @include tablet() {
+        width: 400px;
+        margin: 20px auto;
+      }
+      @include desktop() {
+        width: 30%;
+      }
+      img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      div, p {
+        padding: 5px 20px;
+        font: {
+          size: 22px;
+          weight: 300;
+        }
+        color: $color-text-main;
+        @include tablet() {
+          font-size: 16px;
+        }
+        @include desktop() {
+          font-size: 14px;
+        }
+
+      }
+      div:first-of-type {
+        font-size: 26px;
+        color: $color-text;
+        margin-top: 30px;
+        font-weight: 800;
+        @include tablet() {
+          font-size: 20px;
+        }
+      }
+
+    }
+  }
+}

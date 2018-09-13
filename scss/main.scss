@@ -1,0 +1,33 @@
+@import "modules/variables";
+@import "modules/mixins";
+@import "partials/header";
+@import "partials/main";
+@import "partials/section";
+@import "partials/footer";
+
+body {
+  background-color: #fafbfd;
+  background-image: url("../images/noisy-texture-200x200-o3-d12-c-ededed-t0.png");
+  font: {
+    family: $font-open;
+  }
+  margin: 0;
+}
+@include large() {
+  section .container, footer .container, header .container, main .container {
+    margin: 0 auto;
+  }
+  footer {
+    margin-top: 40px;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 30px;
+}
