@@ -24,11 +24,51 @@ header {
       border-radius: 5px;
       border: 0;
       opacity: .7;
+      transition: .5s;
       @include desktop() {
         display: none;
       }
+
+
     }
-    nav {
+    .menu-active {
+      left: 255px;
+    }
+
+    nav#navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $color-white;
+      height: 100vh;
+      width: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+      &.active-menu {
+        width: 250px;
+        opacity: 1;
+        visibility: visible;
+      }
+      ul {
+        list-style: none;
+        padding: 0 20px;
+        > li {
+          padding: 10px 0;
+          white-space: nowrap;
+          overflow: hidden;
+          > a {
+            text-decoration: none;
+            color: $color-footer;
+            &:hover {
+              color: $color-header;
+            }
+          }
+        }
+      }
+    }
+
+    nav#navigation-desktop {
       display: none;
 
       @include desktop() {

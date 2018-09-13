@@ -8,6 +8,7 @@
 			  crossorigin="anonymous">
 		<link href="css/main.css" rel="stylesheet">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="js/app.js" defer></script>
 	</head>
 	<body>
 		<header>
@@ -15,7 +16,16 @@
 				<h1>Verti</h1>
 				<div class="author">by Józek</div>
 				<button class="menu"><i class="fas fa-bars"></i></button>
-				<nav>
+				<nav id="navigation">
+					<ul>
+						<li><a href="#">Welcome</a></li>
+						<li><a href="#">Dropdown</a></li>
+						<li><a href="#">Left Sidebar</a></li>
+						<li><a href="#">Right Sidebar</a></li>
+						<li><a href="#">No Sidebar</a></li>
+					</ul>
+				</nav>
+				<nav id="navigation-desktop">
 					<ul>
 						<li class="active">Welcome</li>
 						<li>Dropdown
